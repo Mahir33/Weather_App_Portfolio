@@ -20,7 +20,7 @@ let $url;
 const celcius = '°C'
 const procent = '%'
 
-photo.setAttribute('src', "src/img/unknown.png")
+photo.setAttribute('src', "./src/img/unknown.png")
 
 const getWeather = () => {
     $city = (!input.value) ? 'Berlin' : input.value;
@@ -42,21 +42,21 @@ const getWeather = () => {
         input.value = '';
 
         if(status.id >= 200 && status.id < 300) {
-            photo.setAttribute('src', "src/img/thunderstorm.png")
+            photo.setAttribute('src', "./src/img/thunderstorm.png")
         } else if (status.id >= 300 && status.id < 400) {
-            photo.setAttribute('src', "src/img/drizzle.png")
+            photo.setAttribute('src', "./src/img/drizzle.png")
         } else if (status.id >= 500 && status.id < 600) {
-            photo.setAttribute('src', "src/img/rain.png")
+            photo.setAttribute('src', "./src/img/rain.png")
         } else if (status.id >= 600 && status.id < 700) {
-            photo.setAttribute('src', "src/img/ice.png")
+            photo.setAttribute('src', "./src/img/ice.png")
         } else if (status.id === 741) {
-            photo.setAttribute('src', "src/img/fog.png")
+            photo.setAttribute('src', "./src/img/fog.png")
         } else if (status.id === 800) {
-            photo.setAttribute('src', "src/img/sun.png")
+            photo.setAttribute('src', "./src/img/sun.png")
         } else if (status.id >= 801 && status.id < 804) {
-            photo.setAttribute('src', "src/img/cloud.png")
+            photo.setAttribute('src', "./src/img/cloud.png")
         } else {
-            photo.setAttribute('src', "src/img/unknown.png")
+            photo.setAttribute('src', "./src/img/unknown.png")
         }
     })
     .catch(() => warning.textContent = 'Chec if the name of the city is correct!')
